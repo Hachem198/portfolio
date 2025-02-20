@@ -1,8 +1,11 @@
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import ChatBotButton from "./components/chatbot/ChatBotButton";
+import Hero from "./components/pages/Hero";
+import About from "./components/pages/About";
 import ChatBotPopover from "./components/chatbot/ChatBotPopover";
+import Technologies from "./components/pages/Technologies";
+import { Experience } from "./components/pages/Experience";
+import { Projects } from "./components/pages/Projects";
+import { Contact } from "./components/pages/Contact";
 function App() {
   return (
     <div className="overflow-x-hidden text-neutral-300 antialised selection:bg-cyan-300 selection:text-cyan-900">
@@ -11,10 +14,13 @@ function App() {
       </div>
       <div className="container mx-auto px-8">
         <Navbar></Navbar>
-
         <Hero></Hero>
         <ChatBotPopover></ChatBotPopover>
         <About></About>
+        <Technologies></Technologies>
+        <Experience></Experience>
+        <Projects></Projects>
+        <Contact></Contact>
       </div>
     </div>
   );

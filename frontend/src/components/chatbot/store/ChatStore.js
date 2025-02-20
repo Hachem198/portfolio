@@ -1,5 +1,5 @@
 import { makeAutoObservable, action } from "mobx";
-import { personalInfo } from "../personalInfo";
+import { personalInfo } from "../../constants/personalInfo";
 class ChatStore {
   messages = [
     {
