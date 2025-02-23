@@ -18,7 +18,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center  p-8">
+    <div className="border-b border-neutral-900 min-h-screen flex items-center justify-center  p-8">
       <div className="flex flex-col md:flex-row bg-purple-950 p-8 rounded-2xl shadow-lg max-w-4xl w-full space-x-0 md:space-x-8 space-y-8 md:space-y-0">
         <img
           className="w-full md:w-1/2 rounded-lg object-cover"
@@ -27,7 +27,7 @@ const Contact = () => {
         />
         <div className="w-full md:w-1/2">
           <h2 className="text-3xl font-bold text-white text-center mb-6">
-            Contact Us
+            Contact Me
           </h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>

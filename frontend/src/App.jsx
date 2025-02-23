@@ -5,7 +5,8 @@ import ChatBotPopover from "./components/chatbot/ChatBotPopover";
 import Technologies from "./components/pages/Technologies";
 import { Experience } from "./components/pages/Experience";
 import { Projects } from "./components/pages/Projects";
-import { Contact } from "./components/pages/Contact";
+import Contact from "./components/pages/Contact";
+import { GetInTouch } from "./components/pages/GetInTouch";
 function App() {
   return (
     <div className="overflow-x-hidden text-neutral-300 antialised selection:bg-cyan-300 selection:text-cyan-900">
@@ -21,6 +22,7 @@ function App() {
         <Experience></Experience>
         <Projects></Projects>
         <Contact></Contact>
+        <GetInTouch></GetInTouch>
       </div>
     </div>
   );

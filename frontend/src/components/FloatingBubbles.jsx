@@ -1,9 +1,14 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 const FloatingBubbles = () => {
   return (
-    <div className="relative w-96 h-96 mb-2">
-      <div className="absolute w-96 h-96 rounded-full shadow-2xl top-10 overflow-hidden group ">
+    <motion.div className="relative w-96 h-96 mb-8">
+      <motion.div
+        initial={{ x: 200, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 1 }}
+        className="absolute w-96 h-96 rounded-full  ml-20 overflow-hidden group "
+      >
         <div
           className="relative w-full h-full transition-all duration-1200 transform group-hover:[transform:rotateX(180deg)]"
           style={{ transformStyle: "preserve-3d" }}
@@ -26,8 +31,8 @@ const FloatingBubbles = () => {
             />
           </div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
