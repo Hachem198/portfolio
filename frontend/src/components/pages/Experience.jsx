@@ -2,10 +2,6 @@ import React from "react";
 import { EXPERIENCES } from "../constants/experiences";
 import { motion } from "framer-motion";
 export const Experience = () => {
-  const textVariants = () => ({
-    initial: { opacity: 0, x: -100 },
-    whileInView: { opacity: 1, x: 0 },
-  });
   return (
     <div className="border-b border-neutral-900 pb-4">
       <motion.h1
@@ -19,16 +15,22 @@ export const Experience = () => {
       <div>
         {EXPERIENCES.map((experience, index) => (
           <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
+            <div className="w-full lg:w-1/4">
+              <motion.p
+                initial={{ x: -100 }}
+                whileInView={{ x: 0 }}
+                transition={{ duration: 1 }}
+                className="mb-2 text-sm text-neutral-400"
+              >
+                {experience.year}
+              </motion.p>
+            </div>
             <motion.div
-              variants={textVariants}
-              initial="initial"
-              whileInView="whileInView"
+              initial={{ opacity: 0, x: 200 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
-              className="w-full lg:w-1/4"
+              className="w-full max-w-xl lg:w-3/4"
             >
-              <p className="mb-2 text-sm text-neutral-400">{experience.year}</p>
-            </motion.div>
-            <div className="w-full max-w-xl lg:w-3/4">
               <h6 className="mb-2 font-semibold">
                 {experience.role} -{" "}
                 <span className="text-sm text-purple-100">
@@ -46,7 +48,7 @@ export const Experience = () => {
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </div>
         ))}
       </div>

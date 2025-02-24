@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { motion } from "framer-motion";
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -20,16 +20,30 @@ const Contact = () => {
   return (
     <div className="border-b border-neutral-900 min-h-screen flex items-center justify-center  p-8">
       <div className="flex flex-col md:flex-row bg-purple-950 p-8 rounded-2xl shadow-lg max-w-4xl w-full space-x-0 md:space-x-8 space-y-8 md:space-y-0">
-        <img
+        <motion.img
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
           className="w-full md:w-1/2 rounded-lg object-cover"
           src="https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Contact"
         />
         <div className="w-full md:w-1/2">
-          <h2 className="text-3xl font-bold text-white text-center mb-6">
+          <motion.h2
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: -100 }}
+            transition={{ duration: 1 }}
+            className="text-3xl font-bold text-white text-center mb-6"
+          >
             Contact Me
-          </h2>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          </motion.h2>
+          <motion.form
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 100 }}
+            transition={{ duration: 1 }}
+            onSubmit={handleSubmit}
+            className="space-y-4"
+          >
             <div>
               <label className="block text-white text-sm mb-1">Name</label>
               <input
@@ -68,7 +82,7 @@ const Contact = () => {
             >
               Send Message
             </button>
-          </form>
+          </motion.form>
         </div>
       </div>
     </div>

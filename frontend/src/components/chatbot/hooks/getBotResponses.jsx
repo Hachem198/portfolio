@@ -7,7 +7,7 @@ export const getBotResponse = async (lastUserMessage) => {
       {
         text:
           index === arr.length - 1
-            ? `Using the details provided above, please address this query: ${text}`
+            ? `Using only the details provided above, please address this query: ${text}`
             : text,
       },
     ],
