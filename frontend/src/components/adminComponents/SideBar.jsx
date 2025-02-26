@@ -1,67 +1,32 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
-
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@/components/ui/sidebar";
+import { CgProfile } from "react-icons/cg";
+import { Link } from "react-router-dom";
+import { GoProjectRoadmap } from "react-icons/go";
+import { AiOutlineExperiment } from "react-icons/ai";
+import { IoMdContacts } from "react-icons/io";
 export const SideBar = () => {
-  const items = [
-    {
-      title: "Home",
-      url: "/admin",
-      icon: Home,
-    },
-    {
-      title: "Inbox",
-      url: "#",
-      icon: Inbox,
-    },
-    {
-      title: "Calendar",
-      url: "#",
-      icon: Calendar,
-    },
-    {
-      title: "Search",
-      url: "#",
-      icon: Search,
-    },
-    {
-      title: "Settings",
-      url: "#",
-      icon: Settings,
-    },
-  ];
+  const linkClassname = "flex items-center space-x-2";
   return (
-    <Sidebar>
-      <SidebarContent className="bg-gradient-to-r from-pink-400  to-purple-600 ">
-        <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <a
-                      href={item.url}
-                      className="text-white text-3x1 hover:bg-gray-300"
-                    >
-                      <item.icon />
-                      <span className=" text-white ">{item.title}</span>
-                    </a>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-      </SidebarContent>
-    </Sidebar>
+    <div className="h-screen absolute w-[300px] bg-purple-400">
+      <div className="mt-18 w-full">
+        <ul className="space-y-4 text-2xl">
+          <Link to="/" className={linkClassname}>
+            <CgProfile></CgProfile>
+            <li>Profile</li>
+          </Link>
+          <Link className={linkClassname}>
+            <GoProjectRoadmap />
+            <li>Projects</li>
+          </Link>
+          <Link className={linkClassname}>
+            <AiOutlineExperiment></AiOutlineExperiment>
+            <li>Experiences</li>
+          </Link>
+          <Link className={linkClassname}>
+            <IoMdContacts></IoMdContacts>
+            <li>Contact</li>
+          </Link>
+        </ul>
+      </div>
+    </div>
   );
 };
