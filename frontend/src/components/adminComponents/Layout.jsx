@@ -1,7 +1,5 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import React from "react";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { SideBar } from "./SideBar";
 const Layout = () => {
   return (
