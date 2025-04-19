@@ -35,7 +35,7 @@ const ChatBotBody = observer(() => {
           lastUserMessage: newMessage,
         });
         chatStore.removeThinkingMessage();
-        chatStore.addMessage({ role: "model", text: botResponse }); // ✅ Add AI response
+        chatStore.addMessage({ role: "model", text: botResponse });
       } catch (error) {
         console.error("Error fetching bot response:", error);
         chatStore.removeThinkingMessage();

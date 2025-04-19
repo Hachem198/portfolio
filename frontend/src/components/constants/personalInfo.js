@@ -1,5 +1,5 @@
 export const personalInfo = `
-    Hello! My name is Alex Carter, and I’m a passionate full-stack developer with over six years of experience building scalable,
+    Hello! My name is Omar Salhi, and I’m a passionate full-stack developer with over six years of experience building scalable,
     high-performance web applications. I specialize in JavaScript and TypeScript, working extensively with modern frameworks like
     React, Next.js, and Vue.js on the frontend, while leveraging Node.js with NestJS and Express.js on the backend. My journey 
     started with a deep curiosity for technology, leading me to develop a strong foundation in databases like PostgreSQL, MongoDB,
