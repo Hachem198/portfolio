@@ -56,7 +56,7 @@ const ChatBotBody = observer(() => {
       {/* Header */}
       <div className="bg-purple-600 p-4 flex items-center rounded-3xl">
         <FaRobot className="text-white w-5 h-5 mr-2" />
-        <span className="text-white font-semibold">ChatBot</span>
+        <span className="text-white font-semibold">AskOmar</span>
       </div>
 
       {/* Messages */}

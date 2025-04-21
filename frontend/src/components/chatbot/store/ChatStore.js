@@ -1,15 +1,16 @@
 import { makeAutoObservable, action } from "mobx";
 import { personalInfo } from "../../constants/personalInfo";
+import { aiPrompt } from "../../constants/AiPrompt";
 class ChatStore {
   messages = [
     {
       role: "model",
-      text: personalInfo,
+      text: aiPrompt,
       hideInChat: true,
     },
     {
       role: "model",
-      text: "Hello! How can I help you today?",
+      text: "Hello! What do you want to know about Omar?",
       hideInChat: false,
     },
   ];

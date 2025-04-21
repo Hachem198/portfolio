@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import omarPhoto from "../assets/omarPhoto.png";
 const FloatingBubbles = () => {
   return (
     <motion.div className="relative w-96 h-96  mb-20">
@@ -25,9 +26,9 @@ const FloatingBubbles = () => {
             style={{ backfaceVisibility: "hidden" }}
           >
             <img
-              src="https://images.unsplash.com/photo-1740031770947-f0e53f07b3e0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src={omarPhoto}
               alt="Floating Bubble"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover "
             />
           </div>
         </div>
