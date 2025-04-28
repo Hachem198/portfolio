@@ -46,7 +46,7 @@ export const SideBar = () => {
             ></img>
           </div>
           <strong className="mt-4 text-[20px]">
-            Hama<br></br> weld lakanya
+            Omar <br /> salhi
           </strong>
         </div>
         <div className="flex justify-center mt-20">

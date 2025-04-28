@@ -31,9 +31,7 @@ const ChatBotBody = observer(() => {
       });
 
       try {
-        const botResponse = await getBotResponse({
-          lastUserMessage: newMessage,
-        });
+        const botResponse = await getBotResponse();
         chatStore.removeThinkingMessage();
         chatStore.addMessage({ role: "model", text: botResponse });
       } catch (error) {

@@ -26,7 +26,7 @@ pnpm-debug.log* # Add this for pnpm
 yarn-error.log*
 
 # env files (can opt-in for committing if needed)
-.env*
+
 
 # vercel
 .vercel

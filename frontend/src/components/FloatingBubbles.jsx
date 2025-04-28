@@ -8,7 +8,7 @@ const FloatingBubbles = () => {
         initial={{ x: 200, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
-        className="absolute w-96 h-96 rounded-full  overflow-hidden   group "
+        className="absolute w-96 h-96 rounded-full  overflow-hidden  group "
       >
         <div
           className="relative w-full h-full transition-all duration-1200 transform group-hover:[transform:rotateX(180deg)]"

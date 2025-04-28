@@ -1,6 +1,6 @@
 import { chatStore } from "../store/chatStore";
 
-export const getBotResponse = async (lastUserMessage) => {
+export const getBotResponse = async () => {
   const history = chatStore.messages.map(({ role, text }, index, arr) => ({
     role,
     parts: [
